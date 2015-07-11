@@ -42,11 +42,11 @@
             </li>
             {% if current_user.is_authenticated() %}
             <li>
-              <a href="{{ url_for('logout_get') }}"><span class="glyphicon glyphicon-log-out"></span>Logout</a>
+              <a href="{{ url_for('logout_get') }}"><span class="glyphicon glyphicon-log-out"></span> Logout</a>
             </li>
             {% else %}
             <li>
-              <a href="{{ url_for('login_get') }}"><span class="glyphicon glyphicon-log-in"></span>Login</a>
+              <a href="{{ url_for('login_get') }}"><span class="glyphicon glyphicon-log-in"></span> Login</a>
             </li>
             {% endif %}
           </ul>
