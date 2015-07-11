@@ -4,6 +4,7 @@ from flask.ext.script import Manager
 from getpass import getpass
 from werkzeug.security import generate_password_hash
 from PROJECTNAME.models import User
+from PROJECTNAME.database import session
 
 from PROJECTNAME import app
 
