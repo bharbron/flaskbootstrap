@@ -13,4 +13,15 @@ mv PROJECTNAME $1
 
 virtualenv --no-site-packages env
 
+mkdir vagrant
+cd vagrant
+curl http://www.pgdevbox.com/Vagrantfile -o Vagrantfile
+vagrant up
+vagrant ssh -- -t createdb $1
+
+echo "Now run the following to start the project:"
+echo "source env/bin/activate"
+echo "pip install -r requirements.txt"
+echo `echo $1 | awk '{print toupper($0)}'`"_SECRET_KEY=foobar python manage.py run"
+
 exit 0
