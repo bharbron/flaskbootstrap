@@ -1,0 +1,12 @@
+Very basic bootstrapper for Flask applications.
+
+Requires python (obviously) and vagrant
+
+Steps to use:
+
+1)  git clone <blahblah>
+2)  "cd" into the directory
+3)  ./initialize.sh <name you want for the project>
+
+The initialize script will then replace all instances of PROJECTNAME in the code with your chosen project name.
+It will also download and startup a vagrant postgres dev box (from http://www.pgdevbox.com/) and create a db named after the project
